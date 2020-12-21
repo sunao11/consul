@@ -27,3 +27,8 @@ en:
         title: "New local target"
       update:
         notice: "Local target updated successfully"
+    relations:
+      review_status:
+        all: "All"
+        pending_sdg_review: "Pending"
+        sdg_reviewed: "Marked as reviewed"
