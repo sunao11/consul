@@ -142,6 +142,7 @@ describe "SDG Relations", :js do
 
         expect(page).to have_content "Internet speech freedom"
         expect(page).not_to have_content "SDG interest"
+        expect(page).to have_link "Pending", class: "is-active"
       end
 
       scenario "goal filter" do
@@ -154,19 +155,41 @@ describe "SDG Relations", :js do
 
         expect(page).to have_content "School"
         expect(page).not_to have_content "Hospital"
+        expect(page).to have_link "Pending", class: "is-active"
       end
-    end
 
-    scenario "target filter" do
-      create(:budget_investment, title: "School", sdg_targets: [SDG::Target[4.1]])
-      create(:budget_investment, title: "Preschool", sdg_targets: [SDG::Target[4.2]])
+      scenario "target filter" do
+        create(:budget_investment, title: "School", sdg_targets: [SDG::Target[4.1]])
+        create(:budget_investment, title: "Preschool", sdg_targets: [SDG::Target[4.2]])
 
-      visit sdg_management_budget_investments_path
-      select "4.1", from: "target_code"
-      click_button "Search"
+        visit sdg_management_budget_investments_path
+        select "4.1", from: "target_code"
+        click_button "Search"
 
-      expect(page).to have_content "School"
-      expect(page).not_to have_content "Preschool"
+        expect(page).to have_content "School"
+        expect(page).not_to have_content "Preschool"
+        expect(page).to have_link "Pending", class: "is-active"
+      end
+
+      scenario "search within current tab" do
+        visit sdg_management_proposals_path(filter: "pending_sdg_review")
+
+        click_button "Search"
+
+        expect(page).to have_link "Pending", class: "is-active"
+
+        visit sdg_management_proposals_path(filter: "sdg_reviewed")
+
+        click_button "Search"
+
+        expect(page).to have_link "Marked as reviewed", class: "is-active"
+
+        visit sdg_management_proposals_path(filter: "all")
+
+        click_button "Search"
+
+        expect(page).to have_link "All", class: "is-active"
+      end
     end
   end
 
