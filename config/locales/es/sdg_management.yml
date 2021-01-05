@@ -32,3 +32,7 @@ es:
         all: "Todos"
         pending_sdg_review: "Pendientes"
         sdg_reviewed: "Marcados como revisados"
+      update:
+        notice: "%{relatable} marcado como revisado"
+      update_and_review:
+        notice: "%{relatable} marcado como revisado y relaciones ODS actualizadas"
