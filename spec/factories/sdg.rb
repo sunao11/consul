@@ -23,4 +23,8 @@ FactoryBot.define do
       end
     end
   end
+
+  factory :sdg_phase, class: "SDG::Phase" do
+    kind { :sensitization }
+  end
 end
