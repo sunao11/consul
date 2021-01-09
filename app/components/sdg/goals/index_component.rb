@@ -5,4 +5,15 @@ class SDG::Goals::IndexComponent < ApplicationComponent
   def initialize(goals)
     @goals = goals
   end
+
+  private
+
+    def icon(goal)
+      render SDG::Goals::IconComponent.new(goal)
+    end
+
+    def goal_link(goal)
+      [icon(goal), sdg_goal_path(goal.code)]
+    end
+
 end
