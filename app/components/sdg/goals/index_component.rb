@@ -8,6 +8,10 @@ class SDG::Goals::IndexComponent < ApplicationComponent
 
   private
 
+    def phases
+      SDG::Phase.order(:kind)
+    end
+
     def icon(goal)
       render SDG::Goals::IconComponent.new(goal)
     end

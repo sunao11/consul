@@ -1,3 +1,13 @@
 <div class="sdg-goals-index">
   <%= link_list(*goals.map { |goal| goal_link(goal) }, class: "sdg-goal-list") %>
+
+  <% phases.each do |phase| %>
+    <section class="sdg-goal-phase">
+      <header>
+        <h2><%= phase.title %></h2>
+      </header>
+
+      <%= render "shared/cards", cards: phase.cards %>
+    </section>
+  <% end %>
 </div>
