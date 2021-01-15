@@ -1,7 +1,7 @@
 <%= header %>
 
 <%= form_for record, url: update_path do |f| %>
-  <%= render SDG::RelatedListSelectorComponent.new(f) %>
+  <%= render SDG::RelatedListSelectorComponent.new(f, record) %>
 
   <%= f.submit %>
 <% end %>

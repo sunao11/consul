@@ -1,8 +1,13 @@
 class SDG::RelatedListSelectorComponent < ApplicationComponent
-  attr_reader :f
+  attr_reader :f, :record
 
-  def initialize(form)
+  def initialize(form, record)
     @f = form
+    @record = record
+  end
+
+  def checked?(code, record)
+    record.sdg_goals.find_by(code: code).present?
   end
 
   def sdg_related_suggestions

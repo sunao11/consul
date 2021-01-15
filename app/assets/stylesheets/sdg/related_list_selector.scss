@@ -4,3 +4,13 @@
     color: white;
   }
 }
+
+.sdg-related-list-selector {
+  .goals .checked {
+    opacity: 0.15;
+  }
+
+  .input-section {
+    margin-top: $line-height / 2;
+  }
+}
