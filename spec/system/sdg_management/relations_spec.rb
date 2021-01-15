@@ -134,11 +134,11 @@ describe "SDG Relations", :js do
       process.sdg_targets = [SDG::Target["3.3"]]
 
       visit sdg_management_edit_legislation_process_path(process)
-      fill_in "Targets", with: "1.2, 2.1"
+      find(:css, ".sdg-related-list-selector-input").set("1.2,")
       click_button "Update Process"
 
       within("tr", text: "SDG process") do
-        expect(page).to have_css "td", exact_text: "1.2, 2.1"
+        expect(page).to have_css "td", exact_text: "1.2"
       end
     end
   end

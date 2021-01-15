@@ -2,6 +2,7 @@ en:
   attributes:
     geozone_id: "Scope of operation"
     results_enabled: "Show results"
+    sdg_related_list: "Enter the SDG Goals you impact on or a text to search for the most aligned one"
     sdg_target_list: "Targets"
     stats_enabled: "Show stats"
     advanced_stats_enabled: "Show advanced stats"
