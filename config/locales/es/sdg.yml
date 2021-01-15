@@ -431,4 +431,6 @@ es:
           one: "Un objetivo más"
           other: "%{count} objetivos más"
     related_list_selector:
+      help:
+        title: "¿Que ODS y metas se alinean con mi %{record}?"
       placeholder: "Escribe las etiquetas que desees"

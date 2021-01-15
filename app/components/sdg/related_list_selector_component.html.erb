@@ -12,4 +12,9 @@
                               "class-list": sdg_related_colors,
                               "placeholder-text": t("sdg.related_list_selector.placeholder") } %>
   </div>
+
+  <div class="help-section callout primary hide">
+    <h4><b><%= t("sdg.related_list_selector.help.title", record: t("activerecord.models.#{record.class.name.underscore}", count: 1)) %></b></h4>
+    <ul class="selected-info"></ul>
+  </div>
 </div>

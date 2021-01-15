@@ -431,4 +431,6 @@ en:
           one: "One more goal"
           other: "%{count} more goals"
     related_list_selector:
+      help:
+        title: "Which ODS and targets are aligned with my %{record}?"
       placeholder: "Write the tags you want"

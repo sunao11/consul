@@ -17,6 +17,7 @@ class SDG::RelatedListSelectorComponent < ApplicationComponent
       display_text = goal_or_target.class.name == "SDG::Goal" ? "SDG#{goal_or_target.code}" : "#{goal_or_target.code}"
       {
         tag: "#{goal_or_target.code}. #{goal_or_target.title.gsub(",", "")}",
+        title: "#{goal_or_target.title}",
         display_text: display_text,
         value: goal_or_target.code
       }
