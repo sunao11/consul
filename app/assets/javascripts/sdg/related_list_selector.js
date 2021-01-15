@@ -26,6 +26,7 @@
       });
       amsifySuggestags.classes.focus = ".sdg-related-list-focus";
       amsifySuggestags.classes.sTagsInput = ".sdg-related-list-selector-input";
+      amsifySuggestags.defaultLabel = $(".sdg-related-list-selector .input").data("placeholder-text");
       amsifySuggestags._init();
 
       $(".sdg-goal-icon").on({

@@ -430,3 +430,5 @@ en:
         more:
           one: "One more goal"
           other: "%{count} more goals"
+    related_list_selector:
+      placeholder: "Write the tags you want"

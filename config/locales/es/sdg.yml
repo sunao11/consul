@@ -430,3 +430,5 @@ es:
         more:
           one: "Un objetivo más"
           other: "%{count} objetivos más"
+    related_list_selector:
+      placeholder: "Escribe las etiquetas que desees"
