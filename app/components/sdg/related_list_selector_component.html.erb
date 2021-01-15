@@ -1,5 +1,7 @@
 <div class="sdg-related-list-selector">
   <div class="input-section">
-    <%= f.text_field :sdg_related_list, class: "input" %>
+    <%= f.text_field :sdg_related_list,
+                      class: "input",
+                      data: { "suggestions-list": sdg_related_suggestions } %>
   </div>
 </div>
