@@ -1,0 +1,6 @@
+@each $code, $color in $sdg-colors {
+  &.goal-color-#{$code}, &.target-color-#{$code}  {
+    background-color: $color;
+    color: white;
+  }
+}

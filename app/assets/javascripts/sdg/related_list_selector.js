@@ -5,6 +5,7 @@
       var amsifySuggestags = new AmsifySuggestags($(".sdg-related-list-selector .input"));
       amsifySuggestags._settings({
         suggestions: $(".sdg-related-list-selector .input").data("suggestions-list"),
+        classes: $(".sdg-related-list-selector .input").data("class-list"),
         whiteList: true,
       });
       amsifySuggestags.classes.focus = ".sdg-related-list-focus";

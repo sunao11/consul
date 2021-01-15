@@ -16,6 +16,16 @@ class SDG::RelatedListSelectorComponent < ApplicationComponent
     end
   end
 
+  def sdg_related_colors
+    goals.map do |goal|
+      [goal, *goal.targets.sort]
+    end.flatten.map do |goal_or_target|
+      goal_code = goal_or_target.code.to_s.split(".")[0]
+      color_class = goal_or_target.class.name == "SDG::Goal" ? "goal-color-#{goal_code}" : "target-color-#{goal_code}"
+      color_class
+    end
+  end
+
   private
 
     def goals
