@@ -18,6 +18,10 @@
         },
         afterAdd: function(value) {
           $("#goal_" + value.toString().split(".")[0]).addClass("checked");
+
+          var item_key = amsifySuggestags.getItemKey(value);
+          var display_text = amsifySuggestags.settings.suggestions[item_key].display_text
+          $('[data-val="' + value + '"]').get(0).childNodes[0].nodeValue = display_text + " ";
         },
       });
       amsifySuggestags.classes.focus = ".sdg-related-list-focus";

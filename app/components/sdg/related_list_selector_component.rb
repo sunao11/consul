@@ -14,8 +14,10 @@ class SDG::RelatedListSelectorComponent < ApplicationComponent
     goals.map do |goal|
       [goal, *goal.targets.sort]
     end.flatten.map do |goal_or_target|
+      display_text = goal_or_target.class.name == "SDG::Goal" ? "SDG#{goal_or_target.code}" : "#{goal_or_target.code}"
       {
         tag: "#{goal_or_target.code}. #{goal_or_target.title.gsub(",", "")}",
+        display_text: display_text,
         value: goal_or_target.code
       }
     end
