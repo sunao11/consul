@@ -23,6 +23,8 @@
           var display_text = amsifySuggestags.settings.suggestions[item_key].display_text
           $('[data-val="' + value + '"]').get(0).childNodes[0].nodeValue = display_text + " ";
         },
+        keepLastOnHoverTag: false,
+        checkSimilar: false
       });
       amsifySuggestags.classes.focus = ".sdg-related-list-focus";
       amsifySuggestags.classes.sTagsInput = ".sdg-related-list-selector-input";
