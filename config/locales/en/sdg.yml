@@ -434,3 +434,4 @@ en:
       help:
         title: "Which ODS and targets are aligned with my %{record}?"
       placeholder: "Write the tags you want"
+      remove_tag_text: "Remove tag"

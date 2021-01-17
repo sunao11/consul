@@ -434,3 +434,4 @@ es:
       help:
         title: "¿Que ODS y metas se alinean con mi %{record}?"
       placeholder: "Escribe las etiquetas que desees"
+      remove_tag_text: "Eliminar etiqueta"

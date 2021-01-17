@@ -3,6 +3,12 @@
   App.SDGRelatedListSelector = {
     initialize: function() {
       var amsifySuggestags = new AmsifySuggestags($(".sdg-related-list-selector .input"));
+
+      amsifySuggestags.setIcon = function() {
+        var remove_tag_text = $(".sdg-related-list-selector .input").data("remove-tag-text");
+        return '<button aria-label="' + remove_tag_text + '" class="remove-tag ' + this.classes.removeTag.substring(1) + '">&#10006;</button>';
+      };
+
       amsifySuggestags._settings({
         suggestions: $(".sdg-related-list-selector .input").data("suggestions-list"),
         classes: $(".sdg-related-list-selector .input").data("class-list"),
